@@ -1,1 +1,14 @@
+<<<<<<< HEAD
 my name is khan
+=======
+function sum1(a,b) {
+  return [a+b, a*b, a/b, a%b]
+}
+
+const [sum, mul, div, mod] = sum1(4,2)
+
+console.log(sum);
+console.log(mul);
+console.log(div);
+console.log(mod);
+>>>>>>> aba9426ac62a895b1da7fdd572478c1698da9b48
