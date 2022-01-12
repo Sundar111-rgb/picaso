@@ -1,0 +1,111 @@
+export const appConfig = {
+    api: {
+     // host: 'https://jsonplaceholder.typicode.com/todos/',
+     host:'https://reqres.in/api/users',
+      timeout: 20000,
+    },
+  }
+  
+  ----------------------------------------------------------------------------------------------------------------------
+  
+  import React, { useState } from 'react';
+import { FlatList, Text, View } from 'react-native';
+import { axiosInstance } from '../src/config/configureaxios'
+import { TouchableOpacity } from 'react-native';
+
+import { getcheckservice, postcheckservice } from '../src/Services/ApiCheckService'
+
+function ApiCheck(props) {
+
+const [MyData, setMyData] = useState([]);
+
+const hello = () => {
+
+    getcheckservice().then(res => {
+        const persons = res.data;
+        setMyData(persons);
+        console.log("==========>>>",persons);
+    });
+      
+}
+
+const hello1 = () => {
+
+    postcheckservice({
+        name: "morpheus",
+        job: "leader"
+    }).then(res => {
+        const persons = res.data;
+       // setMyData(persons);
+        console.log("==========>>>",persons);
+    })
+    .catch((err)=>{
+        console.log("ERROR==========>>>",JSON.stringify(err));
+    })
+      
+}
+
+
+    return (
+        <View style={{  justifyContent:'center', alignItems:'center', backgroundColor:'red'}}>
+            <TouchableOpacity onPress={() => hello1()}>
+            <View>
+                <Text>Axios Fetch</Text>
+            </View>
+            </TouchableOpacity>
+
+            {/* <FlatList data={MyData} renderItem={({item}) => { return(<View><Text>{item.title}</Text></View>)}} /> */}
+        </View>
+    );
+}
+
+export default ApiCheck;
+
+
+--------------------------------------------------------------------------------------------------------
+
+import { axiosInstance } from '../config/configureaxios'
+
+export const getcheckservice = () => {
+  return axiosInstance.get()
+}
+
+
+export const postcheckservice = (payload) => {
+    return axiosInstance.post('',payload)
+  }
+  -----------------------------------------------------------------------------------------------------------------------
+  
+  import axios from "axios";
+
+import { appConfig } from "./config"; 
+
+const axiosConfiguration = () => {
+    return axios.create({
+       baseURL: appConfig.api.host,
+       timeout: appConfig.api.timeout,
+      
+  })
+}
+
+const axiosInstance = axiosConfiguration();
+
+axiosInstance.interceptors.request.use(function (config) {
+    console.log('req');
+     return config;
+   }, function (error) {
+    
+     return Promise.reject(error);
+   });
+   
+   // Add a response interceptor
+   axiosInstance.interceptors.response.use(function (response) {
+       console.log('res');
+   
+     return response;
+   }, function (error) {
+    
+     return Promise.reject(error);
+   }); 
+
+   export { axiosInstance }
