@@ -33,4 +33,7 @@ console.log(arr2);
 
 output :- ["a", "b", "c", "d"]
 
+let arr = [1,2,3,-1,-2];
+console.log(Math.min(...arr)); 
 
+output :- -2
