@@ -37,3 +37,22 @@ let arr = [1,2,3,-1,-2];
 console.log(Math.min(...arr)); 
 
 output :- -2
+
+const user1 = {
+	name: 'Jen',
+	age: 22,
+};
+
+const user2 = {
+	name: "Andrew",
+	location: "Philadelphia"
+};
+
+const mergedUsers = {...user1, ...user2};
+console.log(mergedUsers)
+
+output :- {
+  age: 22,
+  location: "Philadelphia",
+  name: "Andrew"
+}
