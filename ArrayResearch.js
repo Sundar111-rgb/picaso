@@ -17,3 +17,14 @@ console.log([...hhh,...ggg].sort((a,b) => b-a))
 
 output :- [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 
+let arr = ['a','b','c'];
+let arr2 = [...arr];
+arr2.push('d');
+console.log(arr2);
+console.log(arr); 
+
+output :- ["a", "b", "c", "d"]
+          ["a", "b", "c"]
+
+
+
