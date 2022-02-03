@@ -60,3 +60,10 @@ output :- {
     let arr = [1, 2, 3]
     console.log(delete arr[0]);     output :- //true 
     console.log(arr);                         //[empty, 2, 3]
+
+
+console.log([1, 2, 3, 8, 89].reduce((prev, curr) =>
+     prev + curr
+));
+
+output :- 103
