@@ -74,6 +74,10 @@ console.log(null == undefined);      // true
 console.log([1,2,3][1]);              // 2
 
 console.log("my name is khan".split(" ").map(item => item[0]))
+console.log("6576 0980 5434 3221".split(" ").map(item => item[2]))
+
 
 output :- ["m", "n", "i", "k"]
+          ["7", "8", "3", "2"]
+
 
