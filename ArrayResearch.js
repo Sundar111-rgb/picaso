@@ -70,3 +70,10 @@ output :- 103
 
 console.log(null === undefined);     // false
 console.log(null == undefined);      // true
+
+console.log([1,2,3][1]);              // 2
+
+console.log("my name is khan".split(" ").map(item => item[0]))
+
+output :- ["m", "n", "i", "k"]
+
