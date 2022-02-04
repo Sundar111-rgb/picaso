@@ -67,3 +67,6 @@ console.log([1, 2, 3, 8, 89].reduce((prev, curr) =>
 ));
 
 output :- 103
+
+console.log(null === undefined);     // false
+console.log(null == undefined);      // true
