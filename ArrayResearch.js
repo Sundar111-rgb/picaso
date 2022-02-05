@@ -80,4 +80,23 @@ console.log("6576 0980 5434 3221".split(" ").map(item => item[2]))
 output :- ["m", "n", "i", "k"]
           ["7", "8", "3", "2"]
 
+const hhh = {a:'a', b:'b', c:'c'}
+
+const ggg = {...hhh};
+
+delete ggg.a;
+
+console.log(ggg);
+console.log(hhh);
+
+output :- 
+{
+  b: "b",
+  c: "c"
+}
+ {
+  a: "a",
+  b: "b",
+  c: "c"
+}
 
