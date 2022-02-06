@@ -100,3 +100,6 @@ output :-
   c: "c"
 }
 
+console.log("Mynameiskhan".split("").reverse().join("")).     // output :- nahksiemanyM
+console.log("My name is khan".split(" ").reverse().join(" ")). // output :- khan is name My
+
