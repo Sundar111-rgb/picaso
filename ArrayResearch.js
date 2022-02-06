@@ -102,4 +102,6 @@ output :-
 
 console.log("Mynameiskhan".split("").reverse().join("")).     // output :- nahksiemanyM
 console.log("My name is khan".split(" ").reverse().join(" ")). // output :- khan is name My
+console.log("My name is khan".split("").reverse().join("")).    // output :- nahk si eman yM
+
 
