@@ -105,3 +105,14 @@ console.log("My name is khan".split(" ").reverse().join(" ")). // output :- khan
 console.log("My name is khan".split("").reverse().join("")).    // output :- nahk si eman yM
 
 
+console.log({ name: 'sundar', 
+               address : [ { permanant: 'Patna1', temporary : 'Noida1' }, 
+                           { permanant: 'Patna2', temporary : 'Noida2' },         // output :- ["Noida1", "Noida2", "Noida3"]
+                           { permanant: 'Patna3', temporary : 'Noida3' }, 
+                         ] 
+             }.address.map(item => item.temporary))
+
+
+
+console.log([...[1,2,3], ...[4,5,6]][5]).                    // output :-  6
+
