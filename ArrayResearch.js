@@ -116,3 +116,30 @@ console.log({ name: 'sundar',
 
 console.log([...[1,2,3], ...[4,5,6]][5]).                    // output :-  6
 
+---------------------------------------------------------------------------------
+const hhh = [{ id:1, name:'Sundar', address:'Delhi' }]
+
+console.log(hhh[0].id,
+            hhh[0]['id'], 
+            [{ id:1, name:'Sundar', address:'Delhi' }][0]['name'],
+            [{ id:1, name:'Sundar', address:'Delhi' }][0].name
+           )
+
+
+console.log('str'
+             .split('')
+             .reverse()
+             .join() 
+           )
+
+console.log(hhh[0]['name'])
+
+output :- 
+1
+1
+"Sundar"
+"Sundar"
+"r,t,s"
+"Sundar"
+
+
