@@ -141,5 +141,37 @@ output :-
 "Sundar"
 "r,t,s"
 "Sundar"
+--------------------------------------------
+const hhh = [
+             { id:1, name:'Sundar'},
+             { id:1, name:'Sundar'},
+             { id:1, name:'Sundar'}
+            ]
+
+console.log(hhh);
+
+hhh.forEach(a => a.marks = 95)
+hhh.forEach(a => a.grade = 'A')
+
+console.log(hhh);
+
+output :- 
+	{
+  grade: "A",
+  id: 1,
+  marks: 95,
+  name: "Sundar"
+}, {
+  grade: "A",
+  id: 1,
+  marks: 95,
+  name: "Sundar"
+}, {
+  grade: "A",
+  id: 1,
+  marks: 95,
+  name: "Sundar"
+}]
+
 
 
