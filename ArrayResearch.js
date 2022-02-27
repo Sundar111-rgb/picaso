@@ -172,6 +172,17 @@ output :-
   marks: 95,
   name: "Sundar"
 }]
+-------------------------------------------------------------
+const hhh = [
+             { id:1, name:'Sundar'},
+             { id:1, name:'Sundar'},
+             { id:1, name:'Sundar'}
+            ]
 
+console.log(hhh);
 
+hhh.map(a => a.marks = 95)
+hhh.map(a => a.grade = 'A')
+
+console.log(hhh)
 
