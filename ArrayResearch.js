@@ -185,4 +185,34 @@ hhh.map(a => a.marks = 95)
 hhh.map(a => a.grade = 'A')
 
 console.log(hhh)
+--------------------------------------------------------------
+const arr = [
+             {id: 1, date: 'Apr 15 2014 10:00:00 AM'},
+             {id: 2, date: 'Mar 18 2014 08:00:00 AM'}, 
+             {id: 3, date: 'Jun 13 2014 07:00:01 AM'}, 
+             {id: 4, date: 'Aug 12 2014 07:00:03 AM'}
+            ];
+
+const sortByDate = arr => arr.sort((a, b) =>  new Date(a.date).getTime() - new Date(b.date).getTime());
+
+sortByDate(arr);
+console.log(arr);
+
+output :-
+[{
+  date: "Mar 18 2014 08:00:00 AM",
+  id: 2
+}, 
+{
+  date: "Apr 15 2014 10:00:00 AM",
+  id: 1
+}, 
+{
+  date: "Jun 13 2014 07:00:01 AM",
+  id: 3
+},
+{
+  date: "Aug 12 2014 07:00:03 AM",
+  id: 4
+}]
 
