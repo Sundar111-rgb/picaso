@@ -215,4 +215,36 @@ output :-
   date: "Aug 12 2014 07:00:03 AM",
   id: 4
 }]
+----------------------------------------------------------------------
+
+        function getKeyByValue(object, value) {
+            return Object
+              .keys(object)
+              .find(key => object[key] === value);
+        }
+      
+        var exampleObject = {
+            key1: 'Geeks',
+            key2: 100,
+            key3: 'Javascript'
+        };
+      
+        ans = getKeyByValue(exampleObject, 'Javascript');
+        console.log(ans);
+
+
+ var obj = { "1": 5, "2": 7, "3": 0, "4": 0, "5": 0 };
+      
+  
+var result1 = Object.keys(obj).map((key) => Number(key));
+var result2 = Object.keys(obj).map((key) => obj[key]);
+    
+console.log(result1);
+console.log(result2);
+
+output :-----------------
+	
+"key3"
+[1, 2, 3, 4, 5]
+[5, 7, 0, 0, 0]
 
