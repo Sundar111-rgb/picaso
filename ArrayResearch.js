@@ -248,3 +248,24 @@ output :-----------------
 [1, 2, 3, 4, 5]
 [5, 7, 0, 0, 0]
 
+-----------------------------------------------------------------------
+
+const names = ['Alex', 'Bob', 'Johny', 'Atta'];
+const obj = Object.assign({}, names);
+console.log(obj['3']);
+
+
+const animal = {  
+    first: 'The',  
+    last: 'Lion'  
+};  
+const propertyValues=Object.values(animal);  
+console.log(propertyValues);  
+
+output :-----------------
+	
+"Atta"
+["The", "Lion"]
+
+
+
