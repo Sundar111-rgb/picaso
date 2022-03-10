@@ -267,5 +267,21 @@ output :-----------------
 "Atta"
 ["The", "Lion"]
 
+------------------------------------------------------------------------
+
+const sampleArray = [  
+  ['one', 1],  
+  ['two', 2],  
+];  
+  
+console.log(Object.fromEntries(sampleArray)); 
+
+output :----------------
+
+{
+  one: 1,
+  two: 2
+}
+
 
 
