@@ -282,6 +282,66 @@ output :----------------
   one: 1,
   two: 2
 }
+------------------------------------------------------------------------------------------------------
 
+const kkk = [
+             {id:2, week:'Sun', isEnabled : true },
+             {id:4, week:'Thr', isEnabled : false},
+             {id:5, week:'Tue', isEnabled : true },
+             {id:1, week:'Wed', isEnabled : false},
+             {id:3, week:'Mon', isEnabled : true },
+             {id:6, week:'Wed', isEnabled : false},
+             {id:7, week:'Sat', isEnabled : true }
+            ]
 
+const hhh = kkk
+                .filter(item => item.isEnabled === true)
+                .map   (item => item.week)
+
+console.log(hhh)
+
+console.log(kkk
+            .map  (i => i.id)
+            .sort((a,b) => b-a))
+            
+
+console.log(kkk
+            .map  (i => i.id)
+            .splice(1,2,3))
+
+console.log(Array
+            .from(kkk.map(i => i.id),(v => v+v))
+            .join('')
+           )
+
+console.log(kkk.filter(i => i.isEnabled == 6 in kkk.map(i => i.id)))
+--------------------
+
+output :-
+	
+["Sun", "Tue", "Mon", "Sat"]
+
+[7, 6, 5, 4, 3, 2, 1]
+
+[4, 5]
+
+"4810261214"
+
+[ {
+  id: 2,
+  isEnabled: true,
+  week: "Sun"
+},  {
+  id: 5,
+  isEnabled: true,
+  week: "Tue"
+},  {
+  id: 3,
+  isEnabled: true,
+  week: "Mon"
+},  {
+  id: 7,
+  isEnabled: true,
+  week: "Sat"
+}]
 
