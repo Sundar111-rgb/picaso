@@ -344,4 +344,23 @@ output :-
   isEnabled: true,
   week: "Sat"
 }]
+----------------------------------------------------------
+
+makeAdder = (x) => (y) =>  x + y;
+
+
+var add5 = makeAdder;
+var add10 = makeAdder(10);
+var add15 = makeAdder(23)(34);
+
+
+console.log(add15);   
+console.log(add5(12)(15));  
+console.log(add10(12)); 
+
+output :-
+	
+57
+27
+22
 
