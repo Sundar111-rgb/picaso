@@ -364,3 +364,20 @@ output :-
 27
 22
 
+-------------------------------------------------------
+	
+    var secondMax = function (arr) {     
+    var max = Math.max.apply(null, arr); // get the max of the array
+    arr.splice(arr.indexOf(max), 1); // remove max from the array
+    return Math.max.apply(null, arr); // get the 2nd max
+};
+
+var arr = [220, 120, 111, 265, 54, 78]; // use int arrays
+
+
+var max2 = secondMax(arr);
+console.log(max2);
+
+output :- 220
+--------------------------------------------------------
+
