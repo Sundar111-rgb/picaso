@@ -381,3 +381,11 @@ console.log(max2);
 output :- 220
 --------------------------------------------------------
 
+
+var arr = [220, 120, 111, 265, 54, 78];    
+console.log(Math.max.apply(null, arr.splice(arr.indexOf(Math.max.apply(null, arr)), 1)))
+
+output :- 220
+----------------------------------------------------------
+
+
