@@ -388,4 +388,32 @@ console.log(Math.max.apply(null, arr.splice(arr.indexOf(Math.max.apply(null, arr
 output :- 220
 ----------------------------------------------------------
 
+function sum1(a,b) {
+  return [a+b, a*b, a/b, a%b]
+}
 
+const [a,b,c,d] = sum1(4,2)
+const xxx = sum1(5,2)
+
+console.log(a);
+console.log(b);
+console.log(c);
+console.log(d);
+
+console.log(xxx[0])
+console.log(xxx[1])
+console.log(xxx[2])
+console.log(xxx[3])
+
+
+output :-
+	6
+	8
+	2
+	0
+	7
+	10
+	2.5
+	1
+	
+---------------------------------------------------------------
