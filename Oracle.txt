@@ -1,0 +1,17 @@
+select * from student;
+declare 
+id student.id%type;
+name student.name%type;
+address student.address%type;
+cursor tmp is select * from student;
+rpc student%ROWTYPE;
+begin
+open tmp;
+fetch tmp into rpc;
+fetch tmp into id,name,address;
+dbms_output.put_line(rpc.id ||' '|| rpc.name ||' '|| rpc.address);
+dbms_output.put_line('ID: '||id);
+dbms_output.put_line('Name: '||name);
+dbms_output.put_line('Address: '||address);
+end;
+
