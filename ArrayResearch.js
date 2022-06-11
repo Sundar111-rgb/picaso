@@ -429,3 +429,7 @@ console.log([
 output :-
 	
 [{date: "08-02-2014",id: 2}, {date: "12-03-2014",id: 1},  { date: "30-03-2015", id: 2}, { date: "08-04-2020",id: 2}, { date: "08-06-2020",id: 2}]
+
+Array Destructring Concept
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring
+
