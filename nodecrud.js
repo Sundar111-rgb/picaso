@@ -74,4 +74,6 @@ app.listen(3001, ()=> {
  console.log("running on port 3001")
 });
 
+Image upload in MERN link
 https://www.youtube.com/watch?v=AXiOCyVF_Y8
+https://youtu.be/AXiOCyVF_Y8
