@@ -449,4 +449,14 @@ document.writeln(B.prototype.display.call());
 output :-
 	A is invoked B is invoked
 	
+----------------------------------------------------------------------------------------------------------------------------
+var p = new Promise((resolve, reject) => {
+var x=7+5;
+(x==12 ? resolve(" executed and resolved successfully") : reject("rejected"));
+});
+p.then(res => console.log("Promise is"+res)).catch(err => console.log("Promise is "+err));
+
+output :- 
+       "Promise is executed and resolved successfully"
+
 
