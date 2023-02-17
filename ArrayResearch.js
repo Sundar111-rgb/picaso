@@ -432,4 +432,21 @@ output :-
 
 Array Destructring Concept
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#array_destructuring
+----------------------------------------------------------------------------------------------------------------------------
+function A()  
+{  
+} 
+
+function B()  
+{  
+}  
+  
+A.prototype.display = () => "A is invoked";  
+B.prototype.display = () => "B is invoked";  
+document.writeln(A.prototype.display.call()); 
+document.writeln(B.prototype.display.call()); 
+
+output :-
+	A is invoked B is invoked
+	
 
