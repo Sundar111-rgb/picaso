@@ -462,23 +462,26 @@ output :-
 
 var p = new Promise((resolve, reject) => {
 var x=7+1;
-(x==12 ? resolve({ name : [{ first :'Sundar', last:'Chauhan' }, 
-                           { first :'Sundar', last:'Chauhan' },
-                           { first :'Sundar', last:'Chauhan' }
-                          ]}) 
+(x==12 ? resolve(
+                 [
+                  {id:1, first :'Sundar', last:'Chauhan' }, 
+                  {id:2, first :'Sundar', last:'Chauhan' },
+                  {id:3, first :'Sundar', last:'Chauhan' }
+                 ]
+                ) 
                   : 
-         reject({ name : [{ first :'Samer', last:'Chauhan' }, 
-                          { first :'Samer', last:'Chauhan' },
-                          { first :'Samer', last:'Chauhan' }
-                          ]}));
+         reject(
+                [
+                 {id:4, first :'Samer', last:'Chauhan' }, 
+                 {id:5, first :'Samer', last:'Chauhan' },
+                 {id:6, first :'Samer', last:'Chauhan' }
+                ]
+               )
+);
 }); 
 
-p.then(res => {
-   
-  res.name.map(i => console.log(i.first+' '+i.last));
+p.then(res => res.map(i => console.log(i.id+' '+i.first+' '+i.last))
+).catch(err => err.map(i => console.log(i.id+' '+i.first+' '+i.last))
+)
 
-}).catch(err => {
-
-  err.name.map(i => console.log(i.first+' '+i.last));
-})
 
