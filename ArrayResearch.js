@@ -458,5 +458,27 @@ p.then(res => console.log("Promise is"+res)).catch(err => console.log("Promise i
 
 output :- 
        "Promise is executed and resolved successfully"
+-----------------------------------------------------------------------------------------------------------------------------
 
+var p = new Promise((resolve, reject) => {
+var x=7+1;
+(x==12 ? resolve({ name : [{ first :'Sundar', last:'Chauhan' }, 
+                           { first :'Sundar', last:'Chauhan' },
+                           { first :'Sundar', last:'Chauhan' }
+                          ]}) 
+                  : 
+         reject({ name : [{ first :'Samer', last:'Chauhan' }, 
+                          { first :'Samer', last:'Chauhan' },
+                          { first :'Samer', last:'Chauhan' }
+                          ]}));
+}); 
+
+p.then(res => {
+   
+  res.name.map(i => console.log(i.first+' '+i.last));
+
+}).catch(err => {
+
+  err.name.map(i => console.log(i.first+' '+i.last));
+})
 
