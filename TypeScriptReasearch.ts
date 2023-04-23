@@ -72,5 +72,70 @@ const hhh:data = { id:1,
                    }
     
                  };
+--------------------------------------------------------------------------------------------
+interface HashtagGenerator {
+  id: string;
+  name: string;
+}
+
+interface HashtagGeneratorData {
+  id: string;
+  type: string;
+  attributes: HashtagGenerator[];
+}
+
+interface HashtagGeneratorResponse {
+  data: HashtagGeneratorData[];
+}
+
+const hashtagGeneratorResponse: HashtagGeneratorResponse = {
+  "data": [
+    {
+      "id": "1",
+      "type": "hashtag_generator",
+      "attributes": [{
+        "id": "1",
+        "name": "cricketnewss"
+      }]
+    },
+    {
+      "id": "2",
+      "type": "hashtag_generator",
+      "attributes": [{
+        "id": "2",
+        "name": "holidaynews"
+      }]
+    }
+  ]
+};
+
+----------------------------------------------------------------------------------
+interface HashtagGenerator {
+  id: string;
+  name: string;
+}
+
+interface HashtagGeneratorData {
+  id: string;
+  type: string;
+  attributes: HashtagGenerator[];
+}
+
+interface HashtagGeneratorResponse {
+  data: HashtagGeneratorData;
+}
+
+const hashtagGeneratorResponse: HashtagGeneratorResponse = {
+  "data": 
+    {
+      "id": "1",
+      "type": "hashtag_generator",
+      "attributes": [{
+        "id": "1",
+        "name": "cricketnewss"
+      }]
+    }
+    };
+------------------------------------------------------------------------------------------------------
 
 
