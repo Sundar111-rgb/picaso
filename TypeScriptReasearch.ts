@@ -137,5 +137,23 @@ const hashtagGeneratorResponse: HashtagGeneratorResponse = {
     }
     };
 ------------------------------------------------------------------------------------------------------
+type ItemType = {
+  attributes: {
+    name?: string;
+    // add any other properties of the attributes object here
+  }
+  // add any other properties of the item object here
+}
+
+const renderItem = (item: ItemType) => {
+  return (
+    <View style={{ borderColor: 'red', borderWidth: 0, padding: 10 }}>
+      <Text style={{ fontSize: 16, color: '#000', fontWeight: 'bold' }}>
+        {item?.attributes?.name}
+      </Text>
+    </View>
+  );
+}
+
 
 
