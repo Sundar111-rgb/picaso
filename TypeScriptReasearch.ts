@@ -154,6 +154,53 @@ const renderItem = (item: ItemType) => {
     </View>
   );
 }
+-------------------------------------------------------------------------------------------------------
+
+interface HashtagAttributes {
+  id: number;
+  name: string;
+}
+
+interface HashtagGenerator {
+  id: string;
+  type: string;
+  attributes: HashtagAttributes[];
+}
+
+interface HashtagGeneratorResponse {
+  data: HashtagGenerator[];
+}
+
+const hashtagGeneratorResponse: HashtagGeneratorResponse = {
+  "data": [
+    {
+      "id": "1",
+      "type": "hashtag_generator",
+      "attributes": [
+        {
+          "id": 1,
+          "name": "cricketnewss"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "type": "hashtag_generator",
+      "attributes": [
+        {
+          "id": 2,
+          "name": "#cricketnewss"
+        }
+      ]
+    }
+  ]
+};
+
+const hhh: HashtagGenerator[] = hashtagGeneratorResponse.data;
+const hashtagData: HashtagGenerator[] = hhh.filter((item: HashtagGenerator) => item.attributes[0].name === "cricketnewss");
+console.log(hashtagData);
+
+
 
 
 
