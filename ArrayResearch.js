@@ -579,6 +579,22 @@ console.log(student.firstName); // Monica
 student.changeName = 'Sarah';
 
 console.log(student.firstName); // Sarah
+---------------------------------------------------------------
+const user = { 
+    _password: "", 
+    get password() { 
+        return this._password; 
+    }, 
+    set password(value) { 
+        this._password = value; 
+    }, 
+   
+}; 
+  
+console.log(user.password); // "" 
+user.password = "password123"; 
+console.log(user.password); // "321drowssap" 
+
 
 
 
