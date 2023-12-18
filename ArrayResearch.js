@@ -594,6 +594,24 @@ const user = {
 console.log(user.password); // "" 
 user.password = "password123"; 
 console.log(user.password); // "321drowssap" 
+-----------------------------------------------------------------
+const hhh = [1,2,3]
+const kkk = [2,3,4]
+const ggg = [3,4,5]
+const ggk = [4,5,6]
+
+const listofarray = (...n) => {
+     return n
+}
+
+const mmm = listofarray(...hhh,...kkk,...ggg,...ggk);
+console.log(mmm)
+
+function removeDuplicates(arr) { 
+	return arr.filter((item, 
+		index) => arr.indexOf(item) === index); 
+} 
+console.log(removeDuplicates(mmm));
 
 
 
