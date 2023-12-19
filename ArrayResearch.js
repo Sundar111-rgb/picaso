@@ -637,6 +637,34 @@ console.log(query.filter((item,i) => query.indexOf(item) === i))
 output :- 
          [342, 435, 564, 786, 5234]
          [432, 543, 654, 876, 5432]
+------------------------------------------------------------------------------------
+var Arr = [329];
+
+console.log(Arr);
+
+var uniz = []
+for(var i=0;i<Arr.toString().length;i++)
+  {
+    uniz.push(parseInt(Arr.toString()[i]))
+    for (var k = 1; k < uniz.length; k++)
+      {
+       for (var j = 0; j < k; j++)
+         {
+          if (uniz[k] < uniz[j]) {
+            var x = uniz[k];
+            uniz[k] = uniz[j];
+            uniz[j] = x;
+        }
+     }
+  }
+}    
+
+
+console.log([parseInt(uniz.join(''))]);
+
+output :-
+  [329]
+  [239]
 
 
 
