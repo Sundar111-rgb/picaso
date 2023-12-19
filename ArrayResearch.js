@@ -613,7 +613,30 @@ function removeDuplicates(arr) {
 } 
 console.log(removeDuplicates(mmm));
 
+output : -
+	[1, 2, 3, 2, 3, 4, 3, 4, 5, 4, 5, 6]
+        [1, 2, 3, 4, 5, 6]
+--------------------------------------------------------------------------------
 
+const value = [342,435,564,786,5234]
+console.log(value)
+var uniq = [];
+var query = [];
+for(var i=0;i<=value.length-1;i++)
+{
+     uniq.push(value[i].toString().split(''))
+     for(var j=0;j<=uniq.length-1;j++)
+      {
+        uniq[j].sort((a,b) => b-a)
+        query.push(parseInt(uniq[j].join('')))
+      }
+}
+
+console.log(query.filter((item,i) => query.indexOf(item) === i))
+
+output :- 
+         [342, 435, 564, 786, 5234]
+         [432, 543, 654, 876, 5432]
 
 
 
