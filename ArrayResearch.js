@@ -665,6 +665,59 @@ console.log([parseInt(uniz.join(''))]);
 output :-
   [329]
   [239]
+-------------------------------------------------------------------------------------------
+const myObject = {
+  firstName:"John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+console.log(myObject.fullName());
+console.log(myObject.fullName.call({firstName:"Naman", lastName:"Pant"}));
+console.log(myObject.fullName.apply({firstName:"Naman", lastName:"Pant"}));
+console.log(myObject.fullName.bind({firstName:"Naman", lastName:"Pant"})());
+
+output :- 
+
+"John Doe"
+"Naman Pant"
+"Naman Pant"
+"Naman Pant"
+-----------------------------------------------------------------------------------------------
+class Foo {
+  constructor(name) {
+    this.name = name;
+  }
+
+  getNameSeparator() {
+    return '-';
+  }
+}
+
+class FooBar extends Foo {
+  constructor(name, index) {
+    super(name);
+    this.index = index;
+  }
+
+  getFullName() {
+    return this.name + super.getNameSeparator() + this.index;
+  }
+}
+
+const firstFooBar = new FooBar('foo', 1);
+
+console.log(firstFooBar.name);
+// Expected output: "foo"
+
+console.log(firstFooBar.getFullName());
+// Expected output: "foo-1"
+---------------------------------------------------------------------------------------------------
+	
+	
+
 
 
 
