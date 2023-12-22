@@ -716,7 +716,41 @@ console.log(firstFooBar.getFullName());
 // Expected output: "foo-1"
 ---------------------------------------------------------------------------------------------------
 	
+	function print2largest(arr, arr_size) {
+		let i;
+		let largest = second = 0;
+
+		if (arr_size < 2) {
+			document.write(" Invalid Input ");
+			return;
+		}
+
+		for (i = 0 ;i<arr_size;i++){
+			if (arr[i]>largest){
+				second = largest ;
+				largest = arr[i]
+			}
+
+			else if (arr[i]!=largest && arr[i]>second ){
+				second = arr[i];
+			}
+		}
+
+		if (second == 0){
+			
+		return ("There is no second largest element<br>");
+		}
+		else{
+			return ("The second largest element is " + second);
+				
+			}
+		}
 	
+	let arr= [ 12, 35, 1, 10, 134, 1 ];
+	let n = arr.length;
+	console.log(print2largest(arr, n));
+	
+
 
 
 
