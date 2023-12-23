@@ -792,6 +792,23 @@ for(var i = 0; i < arr.length; i++) {
 console.log(uniq)
 output :-
 [1, 2, 3, 4]
+-------------------------------------------------------------
+
+const checkPolindrome = (str) => {
+var len = str.length;
+for( var i=0;i<len/2;i++)
+  {
+    if(str[i] !== str[len - i -1])
+      {
+        return "Not Polindrome";
+      }
+  }
+  return "Polindrome";
+}
+
+console.log(checkPolindrome("MADAMADAM"))
+output :-
+   polindorme
 	
 
 
