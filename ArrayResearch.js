@@ -827,6 +827,48 @@ if(sum == number)
   console.log('Armstrong');
 else
   console.log('Not Armstrong');
+--------------------------------------------------------------
+
+const hhh = [{id:1, name:'Sundar'},{id:2, name:'Sundar'},{id:3, name:'Sundar'}]
+
+hhh.forEach((item) => {
+  item.address = 'Patna',
+  item.pin = "800001"
+}) 
+
+console.log(hhh)
+
+const kkk = {id:1, name:'Sundar'}
+Object.keys(kkk).forEach(i => console.log(i))
+Object.keys(kkk).forEach(i => console.log(kkk[i]))
+
+console.log(Object.values(kkk))
+console.log(Object.entries(kkk)[1][1])
+
+output :- 
+
+[[object Object] {
+  address: "Patna",
+  id: 1,
+  name: "Sundar",
+  pin: "800001"
+}, [object Object] {
+  address: "Patna",
+  id: 2,
+  name: "Sundar",
+  pin: "800001"
+}, [object Object] {
+  address: "Patna",
+  id: 3,
+  name: "Sundar",
+  pin: "800001"
+}]
+"id"
+"name"
+1
+"Sundar"
+[1, "Sundar"]
+"Sundar"
 	
 
 
