@@ -809,6 +809,24 @@ for( var i=0;i<len/2;i++)
 console.log(checkPolindrome("MADAMADAM"))
 output :-
    polindorme
+
+--------------------------------------------------------------
+
+let sum = 0;
+const number = 153;
+
+let tmp = number;
+
+while(tmp > 0) {
+  let remainder = tmp%10;
+  sum = sum + remainder * remainder * remainder;
+  tmp = parseInt(tmp/10);
+}
+
+if(sum == number)
+  console.log('Armstrong');
+else
+  console.log('Not Armstrong');
 	
 
 
