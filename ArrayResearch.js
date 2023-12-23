@@ -749,6 +749,35 @@ console.log(firstFooBar.getFullName());
 	let arr= [ 12, 35, 1, 10, 134, 1 ];
 	let n = arr.length;
 	console.log(print2largest(arr, n));
+------------------------------------------------------------------------------------
+
+const hhh = [9,1,2,7,4,8,10];
+var max = 0
+var secmax = 0
+const getmaxvalue = (hhh) => {
+  
+  
+  for(var i=0;i<hhh.length;i++)
+    {
+     if(max < hhh[i])
+       {
+       secmax = max
+       max = hhh[i]
+       }
+      
+      else if(hhh[i] != max && secmax < hhh[i])
+       secmax = hhh[i]
+     }
+  
+}
+
+
+getmaxvalue(hhh);
+console.log(max);
+console.log(secmax);
+output :-
+        10
+         9
 	
 
 
