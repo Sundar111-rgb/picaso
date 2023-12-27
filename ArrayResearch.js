@@ -877,16 +877,15 @@ const removeDuplicates = (str) =>
         var newstr = "" ;   
       
         for (var i = 0; i < length; i++)    
-        {   
-          let charAtPosition = str.charAt(i);   
-          
-          if (newstr.indexOf(charAtPosition) < 0)   
+        {             
+          if (newstr.indexOf(str.charAt(i)) < 0)   
             {   
-                newstr += charAtPosition;   
+                newstr += str.charAt(i);   
             }   
         }   
        return newstr;  
     };   
+
 
 console.log(removeDuplicates("geeksforgeeksdfg"));
 
