@@ -891,7 +891,8 @@ console.log(removeDuplicates("geeksforgeeksdfg"));
 
 outout :-
 
-"geksfor"
+"geksford"
+
 
 	
 
