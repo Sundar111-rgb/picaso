@@ -869,6 +869,31 @@ output :-
 "Sundar"
 [1, "Sundar"]
 "Sundar"
+--------------------------------------------------------------
+
+const removeDuplicates = (str) =>   
+    {   
+        var length = str.length;   
+        var newstr = "" ;   
+      
+        for (var i = 0; i < length; i++)    
+        {   
+          let charAtPosition = str.charAt(i);   
+          
+          if (newstr.indexOf(charAtPosition) < 0)   
+            {   
+                newstr += charAtPosition;   
+            }   
+        }   
+       return newstr;  
+    };   
+
+console.log(removeDuplicates("geeksforgeeksdfg"));
+
+outout :-
+
+"geksfor"
+
 	
 
 
