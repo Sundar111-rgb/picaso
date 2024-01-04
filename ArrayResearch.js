@@ -931,11 +931,11 @@ for(var i=0;i<=str.length;i++)
          count ++;
      }
 }
+console.log("Number of newyork string :- "+count);
 
-console.log("No. of newyork string ",count);
 
-
-output :- 6
+output :- 
+Number of newyork string :- 6
 
 
 	
