@@ -920,6 +920,22 @@ output :-
 13
 21
 34
+-----------------------------------------------------------------
+const str = "newyorkcitynewyorkcitynewyorkcitynewyorkcitynewyorkcitynewyorkcity"
+var count = 0;
+for(var i=0;i<=str.length;i++)
+  {
+    for(var j=0;j<=str.length;j++)
+    {
+       if(str.substr(i,j) == "newyork")
+         count ++;
+     }
+}
+
+console.log("No. of newyork string ",count);
+
+
+output :- 6
 
 
 	
