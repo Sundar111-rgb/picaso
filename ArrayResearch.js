@@ -923,19 +923,28 @@ output :-
 -----------------------------------------------------------------
 const str = "newyorkcitynewyorkcitynewyorkcitynewyorkcitynewyorkcitynewyorkcity"
 var count = 0;
+var newstr = [];
 for(var i=0;i<=str.length;i++)
   {
     for(var j=0;j<=str.length;j++)
     {
-       if(str.substr(i,j) == "newyork")
+      if(str.substr(i,j) == "newyork")
+        {
          count ++;
+          newstr.push(str.substr(i,j))
+        }
      }
 }
-console.log("Number of newyork string :- "+count);
 
+
+console.log("Number of newyork string :- "+count);
+console.log(newstr);
+console.log(newstr.length);
 
 output :- 
-Number of newyork string :- 6
+"Number of newyork string :- 6"
+["newyork", "newyork", "newyork", "newyork", "newyork", "newyork"]
+6
 
 
 	
