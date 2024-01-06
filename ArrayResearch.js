@@ -946,6 +946,30 @@ output :-
 ["newyork", "newyork", "newyork", "newyork", "newyork", "newyork"]
 6
 
+---------------------------------------------------------------
+
+var arr = [];
+function RightRotate(a, n, k) 
+{ 
+	k = k % n; 
+	for (let i = 0; i < n; i++) { 
+		if (i < k)  
+			arr.push(a[n + i - k]); 
+		else 
+			arr.push(a[i - k]); 
+	} 
+	console.log(arr); 
+} 
+
+let Array = [1, 2, 3, 4, 5]; 
+let N = Array.length; 
+let K = 1; 
+
+RightRotate(Array, N, K); 
+
+output :-
+[5, 1, 2, 3, 4]
+
 
 	
 
