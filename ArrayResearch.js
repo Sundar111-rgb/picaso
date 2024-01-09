@@ -969,6 +969,25 @@ RightRotate(Array, N, K);
 
 output :-
 [5, 1, 2, 3, 4]
+------------------------------------------------------------------
+/* No. of Vowels */
+const vowels = ["a", "e", "i", "o", "u"]
+
+function countVowel(str) {
+    let count = 0;
+
+    for (let letter of str.toLowerCase()) {
+        if (vowels.includes(letter)) {
+            count++;
+        }
+    }
+    return count
+}
+
+const string = "prompt Enter a string"
+const result = countVowel(string);
+console.log(string);
+console.log(result);
 
 
 	
