@@ -989,6 +989,25 @@ const result = countVowel(string);
 console.log(string);
 console.log(result);
 
+------------------------------------------------------------------
+
+const student = { 
+    name: 'John',
+    age: 20,
+    hobbies: ['reading', 'games'],
+};
+
+let count = 0;
+
+for(let key in student) {
+    ++count;
+}
+
+console.log(count);
+
+output :- 
+3
+
 
 	
 
