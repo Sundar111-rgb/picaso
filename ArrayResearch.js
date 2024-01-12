@@ -971,6 +971,8 @@ output :-
 [5, 1, 2, 3, 4]
 ------------------------------------------------------------------
 /* No. of Vowels */
+/* No. of Consonants */
+
 const vowels = ["a", "e", "i", "o", "u"]
 
 function countVowel(str) {
@@ -984,10 +986,25 @@ function countVowel(str) {
     return count
 }
 
+
+function countConsonant(str) {
+    let count = 0;
+
+    for (let letter of str.toLowerCase()) {
+        if (!vowels.includes(letter)) {
+            count++;
+        }
+    }
+    return count
+}
+
 const string = "prompt Enter a string"
-const result = countVowel(string);
+const result1 = countVowel(string.replaceAll(' ',''));
+const result2 = countConsonant(string.replaceAll(' ',''));
+
 console.log(string);
-console.log(result);
+console.log(result1);
+console.log(result2);
 
 ------------------------------------------------------------------
 
