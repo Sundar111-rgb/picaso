@@ -1025,6 +1025,32 @@ console.log(count);
 output :- 
 3
 
+-------------------------------------------------------------
+const o1 = { a: 1 };
+const o2 = { b: 2 };
+const o3 = { c: 3 };
+//const obj = Object.assign(o1, o2, o3);
+const obj = Object.assign({}, o1, o2, o3);
+console.log(obj); // { a: 1, b: 2, c: 3 }
+console.log(o1); // { a: 1, b: 2, c: 3 }, target object itself is changed.
+
+
+const person = {
+  isHuman: false,
+  printIntroduction: function () {
+    console.log(`My name is ${this.name}. Am I human? ${this.isHuman}`);
+  }
+};
+
+const me = Object.create(person);
+
+me.name = 'Matthew'; // "name" is a property set on "me", but not on "person"
+me.isHuman = true; // Inherited properties can be overwritten
+
+me.printIntroduction();
+// Expected output: "My name is Matthew. Am I human? true"
+
+
 
 	
 
