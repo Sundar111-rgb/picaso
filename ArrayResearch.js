@@ -1052,6 +1052,29 @@ me.isHuman = true; // Inherited properties can be overwritten
 me.printIntroduction();
 // Expected output: "My name is Matthew. Am I human? true"
 
+--------------------------------------------------------------------------------
+
+function flattenArray(arr) {
+  let flatArray = [];
+  arr.forEach(element => {
+    if (Array.isArray(element)) {
+      flatArray = flatArray.concat(flattenArray(element));
+    } else {
+      flatArray.push(element);
+    }
+  });
+  return flatArray;
+}
+
+const nestedArray = [1, 2, [3, 4, [5, 6]]];
+const flattenedArray = flattenArray(nestedArray);
+console.log(flattenedArray);
+
+
+output :
+
+[1, 2, 3, 4, 5, 6]
+
 
 
 	
