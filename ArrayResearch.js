@@ -1074,6 +1074,35 @@ console.log(flattenedArray);
 output :
 
 [1, 2, 3, 4, 5, 6]
+--------------------------------------------------------------------------------
+
+class Bank{  
+ getRateOfInterest(){return 0;}  
+}  
+//Creating child classes.  
+class SBI extends Bank{  
+ getRateOfInterest(){return 8;}  
+}  
+  
+class ICICI extends Bank{  
+ getRateOfInterest(){return 7;}  
+}  
+class AXIS extends Bank{  
+ getRateOfInterest(){return 9;}  
+}  
+//Test class to create objects and call the methods  
+
+ s=new SBI();  
+ i=new ICICI();  
+ a=new AXIS();  
+console.log("SBI Rate of Interest: "+s.getRateOfInterest());  
+console.log("ICICI Rate of Interest: "+i.getRateOfInterest());  
+console.log("AXIS Rate of Interest: "+a.getRateOfInterest());  
+
+output :-
+"SBI Rate of Interest: 8"
+"ICICI Rate of Interest: 7"
+"AXIS Rate of Interest: 9"
 
 
 
