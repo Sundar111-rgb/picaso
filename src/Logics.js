@@ -63,5 +63,29 @@ const secondMax = (hhh) => {
 secondMax(hhh)
 
 console.log(max, secmax);
+-----------------------------------------------------------------
+
+let array = ["name=a,age=20","gender=m,add=delhi,state=mp"];
+
+let result = array.map(item => {
+  let obj = {};
+  item.split(',').forEach(pair => {
+    let [key, value] = pair.split('=');
+    obj[key] = value;
+  });
+  return obj;
+}).reduce((acc, curr) => ({ ...acc, ...curr }), {}); // Merge all objects into a single object
+
+console.log(result);
+
+output :-
+
+{
+  add: "delhi",
+  age: "20",
+  gender: "m",
+  name: "a",
+  state: "mp"
+}
 
 
