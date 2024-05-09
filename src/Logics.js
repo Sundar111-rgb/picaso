@@ -88,4 +88,32 @@ output :-
   state: "mp"
 }
 
+---------------------------------------------------------------
+
+let arr = [1, 4, 2, 3, 0, 5, 8, 9, 10, 19, 0, 1, 2, 11, 13, 9, 8, 4, 5, 6];
+let sequences = [];
+let currentSequence = [arr[0]];
+
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] === arr[i - 1] + 1) {
+        currentSequence.push(arr[i]);
+    } else {
+        if (currentSequence.length > 1) {
+            sequences.push(currentSequence);
+        }
+        currentSequence = [arr[i]];
+    }
+}
+
+if (currentSequence.length > 1) {
+    sequences.push(currentSequence);
+}
+
+console.log(sequences);
+
+output :- 
+
+[[2, 3], [8, 9, 10], [0, 1, 2], [4, 5, 6]]
+
+
 
