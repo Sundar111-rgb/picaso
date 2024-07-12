@@ -115,5 +115,29 @@ output :-
 
 [[2, 3], [8, 9, 10], [0, 1, 2], [4, 5, 6]]
 
+---------------------------------------------------------------
+
+const hhh = [1,2,3]
+const kkk = [2,3,4]
+const ggg = [3,4,5]
+const bbb = [4,5,6]
+
+const listofarray = (...n) => n;
+const removeDuplicates = arr => arr.filter((item, index) => arr.indexOf(item) === index); 
+console.log(listofarray(...hhh, ...kkk, ...ggg, ...bbb));
+
+console.log(removeDuplicates(listofarray(...hhh, ...kkk, ...ggg, ...bbb)));
+
+console.log((listofarray(...hhh, ...kkk, ...ggg, ...bbb)
+             .filter((item, index) => (listofarray(...hhh, ...kkk, ...ggg, ...bbb))
+             .indexOf(item) === index)));
+
+
+output :- 
+[1, 2, 3, 2, 3, 4, 3, 4, 5, 4, 5, 6]
+
+[1, 2, 3, 4, 5, 6]
+[1, 2, 3, 4, 5, 6]
+
 
 
