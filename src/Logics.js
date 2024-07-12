@@ -139,5 +139,30 @@ output :-
 [1, 2, 3, 4, 5, 6]
 [1, 2, 3, 4, 5, 6]
 
+--------------------------------------------------------------
+
+const str1="hello";
+const str2="oellh";
+
+console.log(str1.split("")); 
+console.log(str1.split("").sort()); 
+console.log(str1.split("").sort().join('','')); 
+
+console.log(str2.split("")); 
+console.log(str2.split("").sort()); 
+console.log(str2.split("").sort().join('','')); 
+
+console.log(str1.split("").sort().join('','') == str2.split("").sort().join('','')); 
+
+output :-
+
+["h", "e", "l", "l", "o"]
+["e", "h", "l", "l", "o"]
+"ehllo"
+["o", "e", "l", "l", "h"]
+["e", "h", "l", "l", "o"]
+"ehllo"
+true
+
 
 
