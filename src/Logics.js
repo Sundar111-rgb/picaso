@@ -179,9 +179,9 @@ function rearrangeArray(arr) {
     }
     
     let middle = Math.floor(nonZeros.length / 2);
-    console.log(middle);
-    console.log(nonZeros.slice(0, middle))
-    console.log(nonZeros.slice(middle))
+    console.log(middle);                        // 3
+    console.log(nonZeros.slice(0, middle));    //  [1, 2, 4]
+    console.log(nonZeros.slice(middle));       //  [3, 7, 8]
     let result = nonZeros.slice(0, middle).concat(zeros, nonZeros.slice(middle));
     return result;
 }
