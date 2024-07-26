@@ -164,5 +164,32 @@ output :-
 "ehllo"
 true
 
+-----------------------------------------------------------------
+
+function rearrangeArray(arr) {
+    let nonZeros = [];
+    let zeros = [];
+    
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === 0) {
+            zeros.push(arr[i]);
+        } else {
+            nonZeros.push(arr[i]);
+        }
+    }
+    
+    let middle = Math.floor(nonZeros.length / 2);
+    console.log(middle);
+    console.log(nonZeros.slice(0, middle))
+    console.log(nonZeros.slice(middle))
+    let result = nonZeros.slice(0, middle).concat(zeros, nonZeros.slice(middle));
+    return result;
+}
+
+let input = [1, 0, 2, 4, 0, 3, 7, 0, 8];
+let output = rearrangeArray(input);
+console.log(output); // [1, 2, 4, 0, 0, 0, 3, 7, 8]
+
+
 
 
