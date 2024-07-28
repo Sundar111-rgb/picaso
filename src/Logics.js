@@ -237,6 +237,22 @@ for (let i = 0; i < people.length; i++) {
 
 console.log(groupedByAge);
 
+---------------------------------------------------------------------------------
+
+let input = "abc123xyz678";
+
+// Split the string into an array of characters
+let characters = input.split('');
+
+// Filter out non-numeric characters
+let numbers = characters.filter(char => !isNaN(char) && char !== '');
+
+// Join the numeric characters back into a single string
+let output = numbers.join('');
+
+console.log(output); // Output will be "123678"
+
+
 
 
 
