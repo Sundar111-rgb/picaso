@@ -190,6 +190,32 @@ let input = [1, 0, 2, 4, 0, 3, 7, 0, 8];
 let output = rearrangeArray(input);
 console.log(output); // [1, 2, 4, 0, 0, 0, 3, 7, 8]
 
+-------------------------------------------------------------------------
+
+let people = [
+  { name: 'Alice', age: 21 },
+  { name: 'Max', age: 20 },
+  { name: 'Jane', age: 20 }
+];
+
+let groupedByAge = people.reduce((acc, person) => {
+  if (!acc[person.age]) {
+    acc[person.age] = [];
+  }
+  acc[person.age].push(person);
+  return acc;
+}, {});
+
+console.log(groupedByAge);
+
+Output :-
+
+{
+  '20': [ { name: 'Max', age: 20 }, { name: 'Jane', age: 20 } ],
+  '21': [ { name: 'Alice', age: 21 } ]
+}
+
+
 
 
 
