@@ -214,6 +214,28 @@ Output :-
   '20': [ { name: 'Max', age: 20 }, { name: 'Jane', age: 20 } ],
   '21': [ { name: 'Alice', age: 21 } ]
 }
+------------------------------------------------------------------------
+
+let people = [
+  {name: 'Alice', age: 21},
+  {name: 'Max', age: 20},
+  {name: 'Jane', age: 20}
+];
+
+let groupedByAge = {};
+
+for (let i = 0; i < people.length; i++) {
+  let person = people[i];
+  let age = person.age;
+  
+  if (!groupedByAge[age]) {
+    groupedByAge[age] = [];
+  }
+  
+  groupedByAge[age].push(person);
+}
+
+console.log(groupedByAge);
 
 
 
