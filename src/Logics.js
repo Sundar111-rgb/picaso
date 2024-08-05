@@ -252,7 +252,157 @@ let output = numbers.join('');
 
 console.log(output); // Output will be "123678"
 
+----------------------------------------------------------------------------------
 
+
+
+const data = [
+  {
+    "id": 0,
+    "type": "Price",
+    "colorr": "#cccccc",
+    "data": [
+      {
+        "isChecked": true,
+        "code": "Rs 20000 and Below"
+      },
+      {
+        "isChecked": true,
+        "code": "Rs 20000 - Rs 40000"
+      },
+      {
+        "isChecked": true,
+        "code": "Rs 40000 - Rs 50000"
+      },
+      {
+        "isChecked": false,
+        "code": "Rs 50000 - Rs 60000"
+      },
+      {
+        "isChecked": false,
+        "code": "Rs 60000 - Rs 70000"
+      },
+      {
+        "isChecked": false,
+        "code": "Rs 70000 - Rs 80000"
+      },
+      {
+        "isChecked": false,
+        "code": "Rs 80000 and Above"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "type": "Brand",
+    "colorr": "#cccccc",
+    "data": [
+      {
+        "isChecked": true,
+        "code": "HP"
+      },
+      {
+        "isChecked": false,
+        "code": "DELL"
+      },
+      {
+        "isChecked": false,
+        "code": "LENOVO"
+      },
+      {
+        "isChecked": false,
+        "code": "APPLE"
+      },
+      {
+        "isChecked": false,
+        "code": "ACER"
+      }
+    ]
+  }
+]
+ 
+console.log(data.length)
+const blick = [];
+var groupedByAge = [];
+for(var i=0;i<data.length;i++)
+  {
+ groupedByAge = data[i].data.reduce((acc, data) => {
+  if (!acc[data.isChecked]) {
+    acc[data.isChecked] = [];
+  }
+  acc[data.isChecked].push(data);
+  return acc;
+}, {});
+    blick.push(groupedByAge)
+  }
+
+console.log("Blick",blick);
+
+
+output :-
+
+[
+  {
+    false: [
+      {
+        code: "Rs 50000 - Rs 60000",
+        isChecked: false
+      },
+      {
+        code: "Rs 60000 - Rs 70000",
+        isChecked: false
+      },
+      {
+        code: "Rs 70000 - Rs 80000",
+        isChecked: false
+      },
+      {
+        code: "Rs 80000 and Above",
+        isChecked: false
+      }
+    ],
+    true: [
+      {
+        code: "Rs 20000 and Below",
+        isChecked: true
+      },
+      {
+        code: "Rs 20000 - Rs 40000",
+        isChecked: true
+      },
+      {
+        code: "Rs 40000 - Rs 50000",
+        isChecked: true
+      }
+    ]
+  },
+  {
+    false: [
+      {
+        code: "DELL",
+        isChecked: false
+      },
+      {
+        code: "LENOVO",
+        isChecked: false
+      },
+      {
+        code: "APPLE",
+        isChecked: false
+      },
+      {
+        code: "ACER",
+        isChecked: false
+      }
+    ],
+    true: [
+      {
+        code: "HP",
+        isChecked: true
+      }
+    ]
+  }
+]
 
 
 
