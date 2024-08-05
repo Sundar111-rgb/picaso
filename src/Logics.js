@@ -404,6 +404,93 @@ output :-
   }
 ]
 
+------------------------------------------------------------------------------------------------
+
+const input = [
+  {
+    id: 0,
+    type: "Price",
+    colorr: "#cccccc",
+    data: [
+      {
+        isChecked: true,
+        code: "Rs 20000 and Below"
+      },
+      {
+        isChecked: true,
+        code: "Rs 20000 - Rs 40000"
+      },
+      {
+        isChecked: true,
+        code: "Rs 40000 - Rs 50000"
+      },
+      {
+        isChecked: false,
+        code: "Rs 50000 - Rs 60000"
+      },
+      {
+        isChecked: false,
+        code: "Rs 60000 - Rs 70000"
+      },
+      {
+        isChecked: false,
+        code: "Rs 70000 - Rs 80000"
+      },
+      {
+        isChecked: false,
+        code: "Rs 80000 and Above"
+      }
+    ]
+  },
+  {
+    id: 1,
+    type: "Brand",
+    colorr: "#cccccc",
+    data: [
+      {
+        isChecked: true,
+        code: "HP"
+      },
+      {
+        isChecked: false,
+        code: "DELL"
+      },
+      {
+        isChecked: false,
+        code: "LENOVO"
+      },
+      {
+        isChecked: false,
+        code: "APPLE"
+      },
+      {
+        isChecked: false,
+        code: "ACER"
+      }
+    ]
+  }
+];
+
+const filterByTypeAndChecked = (data, type) => {
+  return data
+    .filter(item => item.type === type)
+    .flatMap(item => item.data)
+    .filter(subItem => subItem.isChecked)
+    .map(subItem => subItem.code);
+};
+
+const filteredPrice = filterByTypeAndChecked(input, "Price");
+const filteredBrand = filterByTypeAndChecked(input, "Brand");
+
+console.log("Filtered Prices:", filteredPrice);
+console.log("Filtered Brands:", filteredBrand);
+
+Output :-
+
+Filtered Prices: [ 'Rs 20000 and Below', 'Rs 20000 - Rs 40000', 'Rs 40000 - Rs 50000' ]
+Filtered Brands: [ 'HP' ]
+
+
 
 
 
