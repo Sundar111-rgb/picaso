@@ -1105,6 +1105,41 @@ output :-
 "AXIS Rate of Interest: 9"
 
 
+----------------------------------------------------------------------------------
+
+function hasConsecutiveSum(arr) {
+    for (let i = 0; i < arr.length - 1; i++) {
+        if (arr[i] + arr[i + 1] + arr[i + 2] === 7) {
+            return true;
+        }
+    }
+    return false;
+}
+
+let array = [1, 2, 4, 0, 3, 3, 1];
+console.log(hasConsecutiveSum(array)); // Output: true
+
+--------------------------------------------------------------------------------
+for (let i = 1; i <= 5; i++) {
+    let str = '';
+    for (let j = 1; j <= i; j++) {
+        str += '*';
+    }
+    console.log(str);
+}
+
+output :-
+
+*
+**
+***
+****
+*****
+	
+	
+	
+
+
 
 	
 
